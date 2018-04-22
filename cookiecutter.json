@@ -1,14 +1,16 @@
 {
-    "thesis_title" : "Thesis_Title",
-    "first_name" : "first_name",
-    "last_name" : "last_name",
+    "thesis_title" : "Thesis Title",
+    "first_name" : "firstname",
+    "last_name" : "lastname",
     "repo_name" : "{{ cookiecutter.last_name + '_' + cookiecutter.first_name + '_Vanderbilt_Astro_PhD_Thesis' }}",
     "add_signatures" : ["y","n"],
     "department_name" : "Physics",
     "dissertation_date" : "May 2019",
-    "name_committee_1" : "Member_1",
-    "name_committee_2" : "Member_2",
-    "name_committee_3" : "Member_3",
-    "name_committee_4" : "Member_4",
-    "name_committee_5" : "Member_5"
+    "name_committee_1" : "Member1",
+    "name_committee_2" : "Member2",
+    "name_committee_3" : "Member3",
+    "name_committee_4" : "Member4",
+    "name_committee_5" : "Member5",
+    "_copy_without_render" : [
+        "Extras/headings_settings.tex"]
 }
