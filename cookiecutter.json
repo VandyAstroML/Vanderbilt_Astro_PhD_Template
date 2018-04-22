@@ -4,7 +4,7 @@
     "last_name" : "lastname",
     "repo_name" : "{{ cookiecutter.last_name + '_' + cookiecutter.first_name + '_Vanderbilt_Astro_PhD_Thesis' }}",
     "add_signatures" : ["y","n"],
-    "department_name" : "Physics",
+    "department_name" : "Physics and Astronomy",
     "dissertation_date" : "May 2019",
     "name_committee_1" : "Member1",
     "name_committee_2" : "Member2",
