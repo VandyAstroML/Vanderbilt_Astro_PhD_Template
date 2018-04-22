@@ -12,5 +12,7 @@
     "name_committee_4" : "Member4",
     "name_committee_5" : "Member5",
     "_copy_without_render" : [
-        "Extras/headings_settings.tex"]
+        "Extras/headings_settings.tex",
+        "Extras/commands",
+        "Extras/packages"]
 }
