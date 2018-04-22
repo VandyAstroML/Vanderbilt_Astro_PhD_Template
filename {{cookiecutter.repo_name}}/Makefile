@@ -1,4 +1,4 @@
-.PHONY: all, clean, main.tex
+.PHONY: all, thesis.tex, open_pdf, clean
 
 #################################################################################
 # GLOBALS                                                                       #
@@ -21,10 +21,6 @@ RM_TMP    = ${RM} $(foreach suff, ${TMP_SUFFS}, *.${suff})
 ## Perform all tasks
 all: thesis.tex
 
-## Clean all unnecessary latex-related files
-clean:
-	@$(foreach suff,$(TMP_SUFFS), find . -name "*.$(suff)" -exec $(RM) {} \; ;)
-
 ## List all unnecessary files
 open_pdf: thesis.tex
 	open Thesis/thesis.pdf
@@ -32,6 +28,10 @@ open_pdf: thesis.tex
 ## Compiles Main Thesis file
 thesis.tex: clean
 	(cd ./Thesis && latexmk -pdf thesis.tex)
+
+## Clean all unnecessary latex-related files
+clean:
+	@$(foreach suff,$(TMP_SUFFS), find . -name "*.$(suff)" -exec $(RM) {} \; ;)
 
 #################################################################################
 # Self Documenting Commands                                                     #
