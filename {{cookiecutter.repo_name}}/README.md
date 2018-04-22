@@ -54,6 +54,7 @@ The directory structure of your new project looks like this:
 │
 ├── Extras                  <- Folder with documents like main `aliases`, `packages`, etc.
 │   ├── commands.tex        <- List of commands used throughout the thesis
+│   ├── headings_settings.tex <- Settings used for the different sections, chapters, etc.
 │   └── packages.tex        <- List of packages to load for the thesis.
 │
 ├── Figures                 <- Directory for project figures
