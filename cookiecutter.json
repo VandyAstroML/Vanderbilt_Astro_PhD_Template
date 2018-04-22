@@ -1,0 +1,13 @@
+{
+    "thesis_title" : "Thesis_Title",
+    "repo_name" : "{{ cookiecutter.thesis_title.lower().replace(' ', '_') }}",
+    "author_name" : "Author_Name",
+    "add_signatures" : ["y","n"],
+    "department_name" : "Physics",
+    "dissertation_date" : "May 2019",
+    "name_committee_1" : "Member_1",
+    "name_committee_2" : "Member_2",
+    "name_committee_3" : "Member_3",
+    "name_committee_4" : "Member_4",
+    "name_committee_5" : "Member_5"
+}
