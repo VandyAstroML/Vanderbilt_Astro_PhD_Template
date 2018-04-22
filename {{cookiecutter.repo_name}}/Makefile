@@ -11,7 +11,7 @@ LATEX     = pdflatex
 BASH      = bash -c
 ECHO      = echo
 RM        = rm
-TMP_SUFFS = aux bbl blg log dvi ps eps out
+TMP_SUFFS = aux bbl blg log dvi ps eps out fdb_latexmk fls lof lot nlo
 RM_TMP    = ${RM} $(foreach suff, ${TMP_SUFFS}, *.${suff})
 
 #################################################################################
@@ -26,16 +26,12 @@ clean:
 	@$(foreach suff,$(TMP_SUFFS), find . -name "*.$(suff)" -exec $(RM) {} \; ;)
 
 ## List all unnecessary files
-tmp_show:
-	@$(foreach suff,$(TMP_SUFFS), find . -name "*.$(suff)";)
+open_pdf: thesis.tex
+	open Thesis/thesis.pdf
 
 ## Compiles Main Thesis file
 thesis.tex: clean
-	pdflatex Thesis/thesis.tex
-	bibtex   Thesis/thesis.tex
-	pdflatex Thesis/thesis.tex
-	pdflatex Thesis/thesis.tex
-	clean
+	(cd ./Thesis && latexmk -pdf thesis.tex)
 
 #################################################################################
 # Self Documenting Commands                                                     #
