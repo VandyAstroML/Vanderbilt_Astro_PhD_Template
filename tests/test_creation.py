@@ -57,22 +57,11 @@ def test_makefile(default_baked_project):
 
 def test_folders(default_baked_project):
     expected_dirs = [
-        'data',
-        'data/external',
-        'data/interim',
-        'data/processed',
-        'data/raw',
-        'docs',
-        'models',
-        'notebooks',
-        'references',
-        'reports',
-        'reports/figures',
-        'src',
-        'src/data',
-        'src/features',
-        'src/models',
-        'src/visualization',
+        'Bibliography',
+        'Chapters',
+        'Extras',
+        'Figures',
+        'Thesis',
     ]
 
     ignored_dirs = [
