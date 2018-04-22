@@ -1,0 +1,101 @@
+% This file serves as the `main' file that includes all of the chapters, 
+% appendices, figures, etc.
+
+\listfiles
+\documentclass[12pt]{report}
+
+%% Include all packages
+\input{../Extras/packages}
+
+%% Include all commands
+\input{../Extras/commands}
+
+%% Include Headings settings
+\input{../Extras/headings_settings}
+
+%% Starting documents
+\begin{document}
+
+%% Page Numbering
+\pagenumbering{alph}
+
+%%
+%% Title page
+\input{../Chapters/titlepage}
+
+% Changing page numbering style
+\doublespacing
+\pagenumbering{roman} \setcounter{page}{2}
+
+%%
+%% Dedication
+\input{../Chapters/dedication}
+
+%%
+%% Acknowledgements
+\input{../Chapters/acknowledgments}
+
+%% Spacing settings
+\singlespacing
+
+%%
+%% Table of Contents
+\doublespacing
+\tableofcontents
+\doublespacing
+
+%%
+%% List of Tables
+\listoftables
+\newpage
+
+%%
+%% List of Figures
+\listoffigures
+\newpage
+
+%%
+%% Back to arabic page numbering
+\normalsize
+\doublespacing
+\pagenumbering{arabic}
+\setcounter{page}{1}
+\addcontentsline{toc}{chapter}{Chapter}
+
+%%
+%% Introduction
+\input{../Chapters/introduction}
+
+%%
+%% Chapter 1
+\input{../Chapters/chapter_1}
+
+%%
+%% Chapter 2
+\input{../Chapters/chapter_2}
+
+%%
+%% Chapter 3
+\input{../Chapters/chapter_3}
+
+%%
+%% Chapter 4
+\input{../Chapters/chapter_4}
+
+%%
+%% Future Work
+\input{../Chapters/future_work}
+
+%%
+%% Bibliography
+\bibliographystyle{plainnat}
+\bibliography{../Bibliography/bibliography}
+\clearpage
+
+%%
+%% Appendices
+\input{../Chapters/appendix_A}
+
+
+%% End of the document
+\end{document}

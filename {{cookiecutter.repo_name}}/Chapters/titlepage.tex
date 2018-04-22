@@ -1,0 +1,79 @@
+% This is an example for a `Title Page'.
+% To generate the final document, run latex, build and quick build commands
+% on the skeleton-thesis file not this one.
+
+%%% Options for signature
+\newtoggle{signatures}
+\IfSubStr{ {{ cookiecutter.add_signatures }} }{y}{ \toggletrue{signatures} }{ \togglefalse{signatures} }
+
+%%% Starting `Title Page'
+
+\pagenumbering{alph}
+\begin{titlepage}
+\thispagestyle{empty}\enlargethispage{\the\footskip}%
+\begin{center}
+    {\setstretch{1.66} { {{ cookiecutter.thesis_title }} }\par}
+    \vskip .4in
+    By
+    \vskip .3in
+    { {{ cookiecutter.first_name }} {{ cookiecutter.last_name }} }
+    \vskip .3in
+
+    \begin{doublespace}
+    Dissertation\\
+        Submitted to the Faculty of the           \\
+        Graduate School of Vanderbilt University  \\
+        in partial fulfillment of the requirements\\
+        for the degree of \\ [.1in]
+    \end{doublespace}
+    \MakeUppercase{DOCTOR OF PHILOSOPHY} \\[.1in]
+    in \\ [.1in]
+    { {{ cookiecutter.department_name }} }  \\ [.25in]
+    { {{ cookiecutter.dissertation_date }} }\\ [.25in]
+    Nashville, Tennessee
+    \vskip .5in
+\end{center}
+
+%%%%% --- Committee Members - Signatures --- %%%%%
+\iftoggle{signatures}{
+    \begin{centering}
+        Approved: \hskip 2.9in  Date: \\[1.2em]
+        \rule{3.5in}{.5pt} \hskip 0.1in \rule{2in}{.5pt} \\[.01in]
+        \begin{doublespace}
+            % 1st Committee Member
+            {{ cookiecutter.name_committee_1 }}, Ph.D.\\[.14in]
+            \rule{3.5in}{.5pt} \hskip 0.1in \rule{2in}{.5pt}  \\[.01in]
+            % 2nd Committee Member
+            {{ cookiecutter.name_committee_2 }}, Ph.D.\\[.14in]
+            \rule{3.5in}{.5pt} \hskip 0.1in \rule{2in}{.5pt}  \\[.01in]
+            % 3rd Committee Member
+            {{ cookiecutter.name_committee_3 }}, Ph.D.\\[.14in]
+            \rule{3.5in}{.5pt} \hskip 0.1in \rule{2in}{.5pt}  \\[.01in]
+            % 4th Committee Member
+            {{ cookiecutter.name_committee_4 }}, Ph.D.\\[.14in]
+            \rule{3.5in}{.5pt} \hskip 0.1in \rule{2in}{.5pt}  \\[.01in]
+            % 5th Committee Member
+            {{ cookiecutter.name_committee_5 }}, Ph.D.\\[.14in]
+            \rule{3.5in}{.5pt} \hskip 0.1in \rule{2in}{.5pt}  \\[.01in]
+        \end{doublespace}
+    \end{centering}
+    \vskip 0.14in
+}{
+    \begin{center}
+        \begin{doublespace}
+            Approved:\\
+            % 1st Committee Member
+            {{ cookiecutter.name_committee_2 }}, Ph.D.\\[.14in]
+            % 2nd Committee Member
+            {{ cookiecutter.name_committee_2 }}, Ph.D.\\[.14in]
+            % 3rd Committee Member
+            {{ cookiecutter.name_committee_3 }}, Ph.D.\\[.14in]
+            % 4th Committee Member
+            {{ cookiecutter.name_committee_4 }}, Ph.D.\\[.14in]
+            % 5th Committee Member
+            {{ cookiecutter.name_committee_5 }}, Ph.D.\\[.14in]
+        \end{doublespace}
+    \end{center}
+}
+\end{titlepage}
+

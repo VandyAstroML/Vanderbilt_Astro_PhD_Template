@@ -1,0 +1,149 @@
+% These are the settings for the `Chapters', `Sections', etc.
+% To generate the final document, run latex, build and quick build commands
+% on the skeleton-thesis file not this one.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%% --- List of Settings for the main Thesis document --- %%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%
+%% Page Settings
+\textwidth=6in \oddsidemargin=0.5in \topmargin=-0.5in
+\textheight=9in  % 9in must include page numbers
+\textfloatsep = 0.4in \addtocontents{toc}{\vspace{0.4in} \hfill
+Page\endgraf} \addtocontents{lof}{\vspace{0.2in} \hspace{0.13in} \
+Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
+\hspace{0.13in} \ Table\hfill Page\endgraf}
+
+%%
+%% Footnotes
+\interfootnotelinepenalty=10000
+
+%%
+%% Nomenclature
+\makenomenclature
+
+%%
+%% Graphics and Figures
+\graphicspath{ {Figures/}}
+\DeclareGraphicsExtensions{.pdf,.jpeg,.png,.PNG, .eps, .tiff}
+
+% List of Figures
+\renewcommand{\listfigurename}{LIST OF FIGURES}
+\setlength{\cftbeforefigskip}{0.2in}
+
+%%
+%% URLs and Links
+\urlstyle{same}
+
+%%
+%% Table of Contents
+\usepackage[nottoc]{tocbibind}
+\setcounter{secnumdepth}{7}
+\setcounter{tocdepth}{7}
+\renewcommand{\contentsname}{TABLE OF CONTENTS}
+\renewcommand{\cftchapfont}{\normalfont}
+\renewcommand{\cftchappagefont}{\normalfont}
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+
+%%
+%% List of Tables
+\renewcommand{\listtablename}{LIST OF TABLES}
+\setlength{\cftbeforetabskip}{0.2in}
+
+%%
+%% Bibliography
+\renewcommand{\bibname}{\texorpdfstring{{BIBLIOGRAPHY\vspace{10mm}}}{BIBLIOGRAPHY}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%% --- Headings --- %%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%
+%% Chapter - Headings
+\makeatletter
+\def\@makechapterhead#1{%
+%  \vspace*{50\p@}%
+  {\parindent \z@ \centering
+    \normalfont
+    \ifnum \c@secnumdepth >\m@ne
+      \if@mainmatter
+        \@chapapp\space \thechapter
+        \par\nobreak
+        \vskip 20\p@
+      \fi
+    \fi
+    \interlinepenalty\@M
+    #1\par\nobreak
+    \vskip 40\p@
+  }}
+\def\@schapter#1{\if@twocolumn
+                   \@topnewpage[\@makeschapterhead{#1}]%
+                 \else
+                   \@makeschapterhead{#1}%
+                   \@afterheading
+                 \fi}
+\def\@makeschapterhead#1{%
+ % \vspace*{-10\p@}%
+  {\parindent \z@ \centering
+    \normalfont
+    \interlinepenalty\@M
+    #1\par\nobreak
+    \vskip 10\p@
+  }}
+
+%%
+%% Section - Headings
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\centering\normalfont}}
+
+%%
+%% Subsection - Headings
+\renewcommand\subsection{\@startsection {subsection}{2}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\noindent \normalfont  }}
+
+%%
+%% Table of Contents - Headings
+\renewcommand{\@cftmaketoctitle}{
+  \chapter*{\contentsname}
+  \addcontentsline{toc}{chapter}{TABLE OF CONTENTS}}
+
+%%
+%% List of Figures - Headings
+\renewcommand{\@cftmakeloftitle}{
+  \chapter*{\listfigurename}
+  Figure \hfill Page
+  \addcontentsline{toc}{chapter}{LIST OF FIGURES} }
+
+%%
+%% List of Tables - Headings
+\renewcommand{\@cftmakelottitle}{
+  \chapter*{\listtablename}
+   Table \hfill Page
+   \addcontentsline{toc}{chapter}{LIST OF TABLES} }  
+
+\makeatother
+
+\setcounter{section}{-1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% --- Math and Other commands --- %%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%
+%% Floats
+ \floatstyle{plain}
+ \newfloat{Box}{h}{lob}
+ \newcommand{\boxedtext}[3]{
+    \begin{Box} \caption{\small{#1}}
+    \hspace{1.cm}
+    \fbox{\begin{minipage}[c]{0.85\linewidth}
+    \small{#2}
+       \end{minipage}}
+       \label{#3}
+       \end{Box}
+  }
