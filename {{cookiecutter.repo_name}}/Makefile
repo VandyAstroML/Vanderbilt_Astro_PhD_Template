@@ -19,7 +19,7 @@ RM_TMP    = ${RM} $(foreach suff, ${TMP_SUFFS}, *.${suff})
 #################################################################################
 
 ## Perform all tasks
-all: thesis.tex
+all: thesis.tex clean
 
 ## List all unnecessary files
 open_pdf: thesis.tex
