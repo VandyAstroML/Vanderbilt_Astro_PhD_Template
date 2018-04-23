@@ -4,6 +4,11 @@ _An easy, reasonably standardized, but flexible template for the Vanderbilt Ph.D
 
 This template was based on the [Cookiecutter Data Science Project](http://drivendata.github.io/cookiecutter-data-science/)
 
+An example of the resulting PDF can be found in:
+
+[![Documentation Status](https://cdn.rawgit.com/VandyAstroML/Vandy_Starting_Grad_School/53e75f2c/docs/source/documents/phd_thesis/thesis.pdf)](https://img.shields.io/badge/PDF-Latest-orange.svg)
+
+
 ### Requirements to use the cookiecutter template:
 -----------
  - Python 2.7 or 3.5
