@@ -6,8 +6,7 @@ This template was based on the [Cookiecutter Data Science Project](http://driven
 
 An example of the resulting PDF can be found in:
 
-[![Documentation Status](https://cdn.rawgit.com/VandyAstroML/Vandy_Starting_Grad_School/53e75f2c/docs/source/documents/phd_thesis/thesis.pdf)](https://img.shields.io/badge/PDF-Latest-orange.svg)
-
+[![Documentation Status](https://img.shields.io/badge/PDF-Latest-orange.svg)](https://cdn.rawgit.com/VandyAstroML/Vandy_Starting_Grad_School/53e75f2c/docs/source/documents/phd_thesis/thesis.pdf)
 
 ### Requirements to use the cookiecutter template:
 -----------
