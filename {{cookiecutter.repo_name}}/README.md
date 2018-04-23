@@ -8,6 +8,10 @@ An example of the resulting PDF can be found in:
 
 [![Documentation Status](https://img.shields.io/badge/PDF-Latest-orange.svg)](https://cdn.rawgit.com/VandyAstroML/Vandy_Starting_Grad_School/53e75f2c/docs/source/documents/phd_thesis/thesis.pdf)
 
+For the full documentation, see:
+
+[![Documentation Status](https://readthedocs.org/projects/vanderbilt-astro-starting-grad-school/badge/?version=latest)](http://vanderbilt-astro-starting-grad-school.readthedocs.io/en/latest/vanderbilt_phd_thesis.html?badge=latest)
+
 ### Requirements to use the cookiecutter template:
 -----------
  - Python 2.7 or 3.5
