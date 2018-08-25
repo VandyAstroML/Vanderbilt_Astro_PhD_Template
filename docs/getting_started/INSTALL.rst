@@ -309,17 +309,14 @@ following steps:
 - **Drag and drop** or click on **Select a .zip file**
 - Connect your `Mendeley <https://www.mendeley.com/>`_ account. Open one if
   you don't have one. This will link your bibliography with Overleaf.
-  See more `here <https://www.overleaf.com/blog/184-mendeley-integration-is-here-import-your-mendeley-reference-library-into-overleaf#.W4FGoZNKhhE>`_ 
-- Remove the current 'Mendeley.bib' file from the project tree
-- Click on "New file" > "From Mendeley" and name it **Mendeley.bib** and put
-  it in the *root* directory of the project.
+  See more `here <https://www.overleaf.com/blog/184-mendeley-integration-is-here-import-your-mendeley-reference-library-into-overleaf#.W4FGoZNKhhE>`_
 
 For a brief video on how to do this, see the following video:
 
 .. raw:: html
 
     <div style="position: relative; padding-bottom: 56.25%; max-height: 100%; overflow: hidden; max-width: 100%; height: auto;">
-        <iframe src="https://www.youtube.com/embed/t21IDEdGAUw" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+        <iframe src="https://www.youtube.com/embed/b_DAe6wSNlk" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
     </div>
 
 **And now you have a new, working PhD. Thesis.**
