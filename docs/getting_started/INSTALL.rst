@@ -390,7 +390,7 @@ An example of the resulting PDF can be found in:
 .. ----------------------------------------------------------------------------
 
 Project based on the `modified <https://github.com/VandyAstroML/Vanderbilt_Astro_PhD_Template>`_  version of the
-` Vanderbilt University Thesis Template <https://www.sharelatex.com/templates/thesis/vanderbilt-university-thesis>`_.
+`Vanderbilt University Thesis Template <https://www.sharelatex.com/templates/thesis/vanderbilt-university-thesis>`_
 
 .. |Issues| image:: https://img.shields.io/github/issues/VandyAstroML/Vanderbilt_Astro_PhD_Template.svg
    :target: https://github.com/VandyAstroML/Vanderbilt_Astro_PhD_Template/issues
