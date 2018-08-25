@@ -52,6 +52,6 @@ Project based on the `modified <https://github.com/VandyAstroML/Vanderbilt_Astro
    :alt: Project License
 
 .. |PDF_Latest| image:: https://img.shields.io/badge/PDF-Latest-orange.svg
-   :target: https://cdn.rawgit.com/VandyAstroML/Vandy_Starting_Grad_School/53e75f2c/docs/source/documents/phd_thesis/thesis.pdf
+   :target: https://cdn.rawgit.com/vcalderon2009/MNRAS_Cookiecutter/777d6518/docs/documents/MNRAS_output_example.pdf
    :alt: PDF Latest
 
