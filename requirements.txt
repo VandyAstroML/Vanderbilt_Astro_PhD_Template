@@ -1,4 +1,9 @@
 mkdocs
 mkdocs-cinder
-cookiecutter
+cookiecutter>=1.6
 pytest
+gitpython
+sphinx>=1.6
+configparser
+sphinx-automodapi
+numpydoc
