@@ -51,8 +51,8 @@ Project based on the `modified <https://github.com/VandyAstroML/Vanderbilt_Astro
    :target: https://github.com/VandyAstroML/Vanderbilt_Astro_PhD_Template/issues
    :alt: Open Issues
 
-.. |RTD| image:: https://readthedocs.org/projects/mnras-cookiecutter/badge/?version=latest
-   :target: https://mnras-cookiecutter.readthedocs.io/en/latest/?badge=latest
+.. |RTD| image:: https://readthedocs.org/projects/vanderbilt-astro-phd-template/badge/?version=latest
+   :target: https://vanderbilt-astro-phd-template.readthedocs.io/en/latest/?badge=latest
    :alt: Documentation Status
 
 .. |License| image:: https://img.shields.io/badge/license-MIT-blue.svg
