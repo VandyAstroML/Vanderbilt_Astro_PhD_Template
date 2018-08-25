@@ -2,7 +2,7 @@
     "thesis_title" : "Thesis Title",
     "first_name" : "firstname",
     "last_name" : "lastname",
-    "author_name":"{{ cookiecutter.first_name + ' ' + cookiecutter.first_name }}",
+    "author_name":"{{ cookiecutter.first_name + ' ' + cookiecutter.last_name }}",
     "repo_name" : "{{ cookiecutter.last_name + '_' + cookiecutter.first_name + '_Vanderbilt_Astro_PhD_Thesis' }}",
     "add_signatures" : ["y","n"],
     "department_name" : "Physics and Astronomy",
