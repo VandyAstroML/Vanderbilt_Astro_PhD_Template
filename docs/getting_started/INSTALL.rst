@@ -248,9 +248,9 @@ that you need to edit.
 
 .. _using_template:
 
-=====================
+-------------------
 Using the Template
-=====================
+-------------------
 
 Now that one has answered the questions from :ref:`_vandy_phd_fields`,
 you just need to fill in the documents in the ``Chapters`` directory
@@ -261,9 +261,9 @@ The structure of the finalized thesis can be found in the
 
 .. _uploading_overleaf:
 
-==================================
+----------------------------------
 Uploading your Thesis to Overleaf
-==================================
+----------------------------------
 
 Once you have completed setting up your Thesis, and are ready to start
 the writing process, you can upload your paper to
@@ -386,8 +386,6 @@ An example of the resulting PDF can be found in:
 .. image:: https://img.shields.io/badge/PDF-Latest-orange.svg
     :target: https://cdn.rawgit.com/VandyAstroML/Vandy_Starting_Grad_School/53e75f2c/docs/source/documents/phd_thesis/thesis.pdf
     :alt: Documentation Status
-
-
 
 .. ----------------------------------------------------------------------------
 
