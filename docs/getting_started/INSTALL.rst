@@ -9,6 +9,9 @@ the `Vanderbilt University <https://www.vanderbilt.edu/>`_
 This documentation is part of the repository
 `Vanderbilt Ph.D. Thesis - Cookiecutter <https://github.com/VandyAstroML/Vanderbilt_Astro_PhD_Template>`_
 
+.. contents:: Table of Contents
+    :local:
+
 .. _phd_thesis_steps:
 
 ========================================
