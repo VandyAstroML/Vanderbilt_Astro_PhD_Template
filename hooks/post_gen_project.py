@@ -58,7 +58,11 @@ def bibliography_create():
 # Running command
 if __name__ == '__main__':
 
+    ## Licence
     process_licence('{{ cookiecutter.open_source_license }}')
+    ##
+    ## Bibliography
+    bibliography_create()
     ##
     ## Initializing repository
     try:
