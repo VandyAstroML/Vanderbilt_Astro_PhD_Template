@@ -18,6 +18,6 @@
     "use_Overleaf": ["yes", "no"],
     "_copy_without_render" : [
         "Extras/headings_settings.tex",
-        "Extras/commands",
-        "Extras/packages"]
+        "Extras/commands.tex",
+        "Extras/packages.tex"]
 }
