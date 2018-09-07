@@ -185,6 +185,40 @@ The different prompts are:
 |                         | * Keivan Stassun                                   |
 |                         | * Andreas Berlind                                  |
 +-------------------------+----------------------------------------------------+
+|:code:`github_username`  | Author's Github username. This will be use to      |
+|                         | link to the paper to the Github repository.        |
+|                         |                                                    |
+|                         | Examples:                                          |
+|                         |                                                    |
+|                         | * username                                         |
+|                         | * username2018                                     |
++-------------------------+----------------------------------------------------+
+|:code:`github_project`   | Name of the project on Github                      |
+|                         |                                                    |
+|                         | Examples:                                          |
+|                         |                                                    |
+|                         | * Awesome_Paper_username_2018                      |
+|                         | * Another_awesome_paper                            |
++-------------------------+----------------------------------------------------+
+|:code:`open_source_license` | Type of License for the paper. Without this,    |
+|                            | one cannot use any of.                          |
+|                            |                                                 |
+|                            | Options:                                        |
+|                            |                                                 |
+|                            | * MIT                                           |
+|                            | * BSD 3-Clause                                  |
+|                            | * GNU GPL v3+                                   |
+|                            | * Apache Software Licence 2.0                   |
+|                            | * BSD 2-Clause*                                 |
++-------------------------+----------------------------------------------------+
+|:code:`use_Overleaf`     | Option for whether or not you will be uploading it |
+|                         | to www.overleaf.com                                |
+|                         |                                                    |
+|                         | Options:                                           |
+|                         |                                                    |
+|                         | * yes                                              |
+|                         | * no                                               |
++-------------------------+----------------------------------------------------+
 
 .. _vandy_phd_writing:
 

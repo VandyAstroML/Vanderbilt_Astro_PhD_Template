@@ -13,6 +13,10 @@
 %% Include Headings settings
 \input{../Extras/headings_settings}
 
+%% Bibliography
+\bibliographystyle{apj}
+\citestyle{aa}
+
 %% Starting documents
 \begin{document}
 
@@ -63,12 +67,8 @@
 \addcontentsline{toc}{chapter}{Chapter}
 
 %%
-%% Introduction
+%% Introduction - Also Chapter 1
 \input{../Chapters/introduction}
-
-%%
-%% Chapter 1
-\input{../Chapters/chapter_1}
 
 %%
 %% Chapter 2
@@ -88,8 +88,12 @@
 
 %%
 %% Bibliography
-\bibliographystyle{plainnat}
+
+{% if cookiecutter.use_Overleaf.lower() == "yes" %}
+\bibliography{bibliography.bib}
+{% else %}
 \bibliography{../Bibliography/bibliography}
+{% endif %}
 \clearpage
 
 %%

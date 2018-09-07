@@ -15,6 +15,7 @@
     "open_source_license": ["MIT", "BSD 3-Clause", "GNU GPL v3+", "Apache Software Licence 2.0", "BSD 2-Clause"],
     "github_username": "vcalderon2009",
     "github_project": "{{ cookiecutter.github_username }}/{{ cookiecutter.repo_name }}",
+    "use_Overleaf": ["yes", "no"],
     "_copy_without_render" : [
         "Extras/headings_settings.tex",
         "Extras/commands",

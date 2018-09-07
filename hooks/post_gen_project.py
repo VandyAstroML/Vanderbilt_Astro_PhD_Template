@@ -40,6 +40,21 @@ def process_licence(licence_name):
     ## Remove `licenses` folder
     shutil.rmtree(os.path.join(PROJECT_DIRECTORY, 'licenses'))
 
+def bibliography_create():
+    """
+    Creates the `.bib` file, based on the answer from cookiecutter.use_Overleaf
+    """
+    if ('{{ cookiecutter.use_Overleaf.lower() }}' == 'yes'):
+        bib_path = 'bibliography.bib'
+    else:
+        bib_path = './Bibliography/bibliography.bib'
+    ## Creating file
+    try:
+        open(bib_path, 'a').close()
+        assert(os.path.exists(bib_path))
+    except:
+        raise ValueError('`{0}` file could not be created'.format(bib_path))
+
 # Running command
 if __name__ == '__main__':
 
