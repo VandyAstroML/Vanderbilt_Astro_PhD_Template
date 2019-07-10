@@ -40,28 +40,24 @@
 
 %%%%% --- Committee Members - Signatures --- %%%%%
 \iftoggle{signatures}{
-    \begin{centering}
-        Approved: \hskip 2.9in  Date: \\[1.2em]
-        \rule{3.5in}{.5pt} \hskip 0.1in \rule{2in}{.5pt} \\[.01in]
-        \begin{doublespace}
-            % 1st Committee Member
-            {{ cookiecutter.name_committee_1 }}, Ph.D.\\[.14in]
-            \rule{3.5in}{.5pt} \hskip 0.1in \rule{2in}{.5pt}  \\[.01in]
-            % 2nd Committee Member
-            {{ cookiecutter.name_committee_2 }}, Ph.D.\\[.14in]
-            \rule{3.5in}{.5pt} \hskip 0.1in \rule{2in}{.5pt}  \\[.01in]
-            % 3rd Committee Member
-            {{ cookiecutter.name_committee_3 }}, Ph.D.\\[.14in]
-            \rule{3.5in}{.5pt} \hskip 0.1in \rule{2in}{.5pt}  \\[.01in]
-            % 4th Committee Member
-            {{ cookiecutter.name_committee_4 }}, Ph.D.\\[.14in]
-            \rule{3.5in}{.5pt} \hskip 0.1in \rule{2in}{.5pt}  \\[.01in]
-            % 5th Committee Member
-            {{ cookiecutter.name_committee_5 }}, Ph.D.\\[.14in]
-            \rule{3.5in}{.5pt} \hskip 0.1in \rule{2in}{.5pt}  \\[.01in]
-        \end{doublespace}
-    \end{centering}
-    \vskip 0.14in
+    Approved: \hskip 2.9in  Date: \\[2.0em]
+    \noindent\begin{tabular}{ll}
+        % Member 1
+        \makebox[4.0in]{\hrulefill} & \makebox[1.5in]{\hrulefill}\\
+        {{ cookiecutter.name_committee_1 }}, Ph.D. & \\[0.15in]
+        % Member 2
+        \makebox[4.0in]{\hrulefill} & \makebox[1.5in]{\hrulefill}\\
+        {{ cookiecutter.name_committee_2 }}, Ph.D. & \\[0.15in]
+        % Member 3
+        \makebox[4.0in]{\hrulefill} & \makebox[1.5in]{\hrulefill}\\
+        {{ cookiecutter.name_committee_3 }}, Ph.D. & \\[0.15in]
+        % Member 4
+        \makebox[4.0in]{\hrulefill} & \makebox[1.5in]{\hrulefill}\\
+        {{ cookiecutter.name_committee_4 }}, Ph.D. & \\[0.15in]
+        % Member 5
+        \makebox[4.0in]{\hrulefill} & \makebox[1.5in]{\hrulefill}\\
+        {{ cookiecutter.name_committee_5 }}, Ph.D. & \\[0.15in]
+    \end{tabular}
 }{
     \begin{center}
         \begin{doublespace}
