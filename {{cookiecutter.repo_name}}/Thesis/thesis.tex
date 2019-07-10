@@ -2,10 +2,15 @@
 % appendices, figures, etc.
 
 \listfiles
+ %% Changed from 12pt. Fixed dimensions have not been updated.
 \documentclass[12pt]{report}
 
 %% Include all packages
 \input{../Extras/packages}
+
+%% Include style files
+\usepackage{../Extras/sfchap}
+\usepackage{../Extras/sfsection}
 
 %% Include all commands
 \input{../Extras/commands}
@@ -13,19 +18,19 @@
 %% Include Headings settings
 \input{../Extras/headings_settings}
 
-%% Bibliography
-\bibliographystyle{plainnat}
-\citestyle{aa}
+%% Add citation aliases if applicable
+% \defcitealias{citation_key}{citation_alias}
 
 %% Starting documents
 \begin{document}
 
-%% Page Numbering
-\pagenumbering{alph}
-
 %%
 %% Title page
 \input{../Chapters/titlepage}
+
+%% This setting will make a difference to the output because the page number
+%% is suppressed for the title.
+\pagenumbering{alph}
 
 % Changing page numbering style
 \doublespacing
@@ -43,20 +48,21 @@
 \singlespacing
 
 %%
-%% Table of Contents
-\doublespacing
+%% Table of contents
 \tableofcontents
-\doublespacing
 
 %%
 %% List of Tables
+\begingroup
+\setlength{\parskip}{1\baselineskip}
 \listoftables
 \newpage
 
 %%
-%% List of Figures
+%% List of figures
 \listoffigures
 \newpage
+\endgroup
 
 %%
 %% Back to arabic page numbering
@@ -64,7 +70,6 @@
 \doublespacing
 \pagenumbering{arabic}
 \setcounter{page}{1}
-\addcontentsline{toc}{chapter}{Chapter}
 
 %%
 %% Introduction - Also Chapter 1
@@ -88,6 +93,10 @@
 
 %%
 %% Bibliography
+\singlespacing
+\bibliographystyle{mnras_formatted}
+% \bibliographystyle{plainnat}
+\citestyle{aa}
 
 {% if cookiecutter.use_Overleaf.lower() == "yes" %}
 \bibliography{bibliography.bib}
@@ -99,7 +108,6 @@
 %%
 %% Appendices
 \input{../Chapters/appendix_A}
-
 
 %% End of the document
 \end{document}

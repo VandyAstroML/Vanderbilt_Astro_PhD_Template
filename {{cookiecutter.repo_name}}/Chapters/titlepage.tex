@@ -6,11 +6,15 @@
 \newtoggle{signatures}
 \IfSubStr{ {{ cookiecutter.add_signatures }} }{y}{ \toggletrue{signatures} }{ \togglefalse{signatures} }
 
-%%% Starting `Title Page'
+%% Starting `Title Page'
 
+% This setting will make a difference to the output because the page number is
+% suppressed for the title page.
 \pagenumbering{alph}
+
+%% Adding metadata for title page
 \begin{titlepage}
-\thispagestyle{empty}\enlargethispage{\the\footskip}%
+\thispagestyle{empty}\enlargethispage{\the\footskip}
 \begin{center}
     {\setstretch{1.66} { {{ cookiecutter.thesis_title }} }\par}
     \vskip .4in
@@ -75,5 +79,5 @@
         \end{doublespace}
     \end{center}
 }
-\end{titlepage}
 
+\end{titlepage}

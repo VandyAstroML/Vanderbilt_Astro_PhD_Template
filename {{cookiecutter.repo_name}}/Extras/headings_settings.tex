@@ -10,27 +10,16 @@
 %% Page Settings
 \textwidth=6in \oddsidemargin=0.5in \topmargin=-0.5in
 \textheight=9in  % 9in must include page numbers
-\textfloatsep = 0.4in \addtocontents{toc}{\vspace{0.4in} \hfill
+\textfloatsep = 0.4in
+\addtocontents{toc}{\vspace{0.4in} \hfill
 Page\endgraf} \addtocontents{lof}{\vspace{0.2in} \hspace{0.13in} \
 Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 \hspace{0.13in} \ Table\hfill Page\endgraf}
 
 %%
-%% Footnotes
-\interfootnotelinepenalty=10000
-
-%%
-%% Nomenclature
-\makenomenclature
-
-%%
 %% Graphics and Figures
 \graphicspath{ {../Figures/}}
-\DeclareGraphicsExtensions{.pdf,.jpeg,.png,.PNG, .eps, .tiff}
-
-% List of Figures
-\renewcommand{\listfigurename}{LIST OF FIGURES}
-\setlength{\cftbeforefigskip}{0.2in}
+\DeclareGraphicsExtensions{.pdf, .jpeg, .png, .PNG, .eps, .tiff}
 
 %%
 %% URLs and Links
@@ -38,112 +27,38 @@ Figure\hfill Page\endgraf} \addtocontents{lot}{\vspace{0.2in}
 
 %%
 %% Table of Contents
-\usepackage[nottoc]{tocbibind}
 \setcounter{secnumdepth}{7}
-\setcounter{tocdepth}{7}
+\setcounter{tocdepth}{1}
 \renewcommand{\contentsname}{TABLE OF CONTENTS}
-\renewcommand{\cftchapfont}{\normalfont}
-\renewcommand{\cftchappagefont}{\normalfont}
-\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
-
-%%
-%% List of Tables
+\renewcommand{\listfigurename}{LIST OF FIGURES}
 \renewcommand{\listtablename}{LIST OF TABLES}
-\setlength{\cftbeforetabskip}{0.2in}
-
-%%
-%% Bibliography
 \renewcommand{\bibname}{\texorpdfstring{{BIBLIOGRAPHY\vspace{10mm}}}{BIBLIOGRAPHY}}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%% --- Headings --- %%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Stats Table label
+\newcommand{\statslabel}[2]{\multirowcell{#1}[-1.6mm][c]{#2}}
 
 %%
-%% Chapter - Headings
-\makeatletter
-\def\@makechapterhead#1{%
-%  \vspace*{50\p@}%
-  {\parindent \z@ \centering
-    \normalfont
-    \ifnum \c@secnumdepth >\m@ne
-      \if@mainmatter
-        \@chapapp\space \thechapter
-        \par\nobreak
-        \vskip 20\p@
-      \fi
-    \fi
-    \interlinepenalty\@M
-    #1\par\nobreak
-    \vskip 40\p@
-  }}
-\def\@schapter#1{\if@twocolumn
-                   \@topnewpage[\@makeschapterhead{#1}]%
-                 \else
-                   \@makeschapterhead{#1}%
-                   \@afterheading
-                 \fi}
-\def\@makeschapterhead#1{%
- % \vspace*{-10\p@}%
-  {\parindent \z@ \centering
-    \normalfont
-    \interlinepenalty\@M
-    #1\par\nobreak
-    \vskip 10\p@
-  }}
+%% Below heading rule
+\newcommand{\otoprule}{\midrule[\heavyrulewidth]}
 
 %%
-%% Section - Headings
-\renewcommand\section{\@startsection {section}{1}{\z@}%
-                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
-                                   {2.3ex \@plus.2ex}%
-                                   {\centering\normalfont}}
+%% Prevent double spaced equations
+\newenvironment{tightequation}{\singlespace\begin{equation}}{\end{equation}}
 
 %%
-%% Subsection - Headings
-\renewcommand\subsection{\@startsection {subsection}{2}{\z@}%
-                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
-                                   {2.3ex \@plus.2ex}%
-                                   {\noindent \normalfont  }}
+%% Extra junk to pretty up the table of contents
+\setlength{\cftsecnumwidth}{2.8em}
+\setlength{\cftsubsecnumwidth}{3.7em}
+\setlength{\cftsubsubsecnumwidth}{4.6em}
+\setlength{\cftparanumwidth}{5.5em}
+\setlength{\cftsubparanumwidth}{6.5em}
+\setlength{\cfttabnumwidth}{3.5em}
+\setlength{\cftfignumwidth}{3.5em} 
 
 %%
-%% Table of Contents - Headings
-\renewcommand{\@cftmaketoctitle}{
-  \chapter*{\contentsname}
-  \addcontentsline{toc}{chapter}{TABLE OF CONTENTS}}
-
-%%
-%% List of Figures - Headings
-\renewcommand{\@cftmakeloftitle}{
-  \chapter*{\listfigurename}
-  Figure \hfill Page
-  \addcontentsline{toc}{chapter}{LIST OF FIGURES} }
-
-%%
-%% List of Tables - Headings
-\renewcommand{\@cftmakelottitle}{
-  \chapter*{\listtablename}
-   Table \hfill Page
-   \addcontentsline{toc}{chapter}{LIST OF TABLES} }  
-
-\makeatother
-
-\setcounter{section}{-1}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%% --- Math and Other commands --- %%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%
-%% Floats
- \floatstyle{plain}
- \newfloat{Box}{h}{lob}
- \newcommand{\boxedtext}[3]{
-    \begin{Box} \caption{\small{#1}}
-    \hspace{1.cm}
-    \fbox{\begin{minipage}[c]{0.85\linewidth}
-    \small{#2}
-       \end{minipage}}
-       \label{#3}
-       \end{Box}
-  }
+%% Chapter Mark
+\renewcommand{\chaptermark}[1]{%
+  \markboth{\MakeUppercase{%
+      \chaptername}\ \thechapter.%
+    \ #1}{}}
