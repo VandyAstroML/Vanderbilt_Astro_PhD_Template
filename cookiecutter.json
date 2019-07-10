@@ -19,7 +19,7 @@
     "_copy_without_render" : [
         "Extras/headings_settings.tex",
         "Extras/commands.tex",
-        "Extras/packages.tex",
+        // "Extras/packages.tex",
         "Extras/sfchap.sty",
         "Extras/sfsection.sty",
         "Thesis/mnras_formatted.bst"]
